@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Outliner",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Outline the page.",
+    "description": "Extension description"
+  }
+}
