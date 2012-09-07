@@ -1,19 +1,31 @@
 body
-  margin-left 280px
+  position relative
   -webkit-transition margin-left .5s
 
 #outliner-sidebar
+  
+  // reset
+  &, div, ol, li, a
+    margin 0
+    padding 0
+    border 0
+    font-size 100%
+    font inherit
+    vertical-align baseline
+    line-height 1
+    background transparent
+
+#outliner-sidebar
+
+  font-family sans-serif  
   position fixed
-  left 0
   top 0
   bottom 0
-  background-image url('chrome-extension://__MSG_@@extension_id__/ui/low_contrast_linen.png')
-  background-repeat repeat
+  background url('chrome-extension://__MSG_@@extension_id__/ui/low_contrast_linen.png') repeat
   overflow hidden
-  -webkit-transition left 1s .5s
-  &.hidden
-    left -280px !important
-
+  -webkit-transition left .5s
+  left -280px
+  
   &:after
     content ''
     display block
@@ -22,10 +34,9 @@ body
     width 24px
     top -12px
     bottom -12px
-    background-color transparent
+    background transparent
     box-shadow 0 0 12px rgba(#000, .9)
 
-  // customize scroll bar!
 
   #outliner-sidebar-header
     position absolute
@@ -34,43 +45,79 @@ body
     bottom 0
     padding 0 5px
     width 32px
-    background-color rgba(#000,.5)
+    background rgba(#000,.5)
     box-shadow 0 0 12px rgba(#000, .9)
     #outliner-sidebar-title
       font-size 26px
       color #000
-      text-shadow -1px 0 rgba(#fff, .15)
-      -webkit-transform rotate(-90deg) translateX(-72px)
+      text-shadow -1px 0 rgba(#fff, .2)
+      -webkit-transform rotate(-90deg) translateX(-75px)
+    #outliner-sidebar-close-btn
+      position absolute
+      bottom 20px
+      left 50%
+      width 24px
+      height 24px
+      margin-left -12px
+      cursor pointer
+      &:before,
+      &:after
+        content ''
+        display block
+        position absolute
+        width 24px
+        height 4px
+        top 10px
+        border-radius 1px
+        background-color #000
+      &:before
+        -webkit-transform rotate(45deg)
+        box-shadow 1px 1px rgba(#fff, .2)
+      &:after
+        -webkit-transform rotate(-45deg)
+        box-shadow -1px 1px rgba(#fff, .2)
 
 
   #outliner-sidebar-content-wrapper
     margin-left 42px
-    background-color transparent
-    overflow auto
+    background transparent
+    overflow hidden
+    box-sizing border-box
+    position relative
+    width 238px
     height 100%
     #outliner-sidebar-content
-      width 218px
+      overflow auto
+      position absolute
+      top 5px
+      left 5px
+      bottom 5px
+      right 5px
+      box-sizing border-box
       color #ccc
       text-shadow 0 1px 2px black
-      padding 10px
+      padding 5px
       ol
         padding 0 0 0 15px
         margin 0
         li
-          margin 10px 0 0
+          margin 1em 0 0
+          line-height 125%
           padding 0
           list-style none
-          &.h1
+          &.outliner-h1
             font-size 20px
-          &.h2
+          &.outliner-h2
             font-size 16px
-          &.h3
+          &.outliner-h3
             font-size 13px
-          &.h4
+          &.outliner-h4
             font-size 12px
-          &.h5,
-          &.h6
-            display none
+          &.outliner-h5,
+          &.outliner-h6,
+          &.outliner-tagless
+            & > a
+              display none
           a
             color inherit
             text-decoration none
@@ -84,34 +131,22 @@ body
         & > li
           margin-top 0 !important
 
-  ::-webkit-scrollbar
-    width 6px
-    height 6px
+    ::-webkit-scrollbar
+      width 6px
+      height 6px
 
-  ::-webkit-scrollbar-thumb
-    background-color rgba(0, 0, 0, .2)
-    border-radius 3px
-    // box-shadow inset 0 0 6px rgba(0, 0, 0, .5)
-    // border-radius 10px
+    ::-webkit-scrollbar-thumb
+      background-color rgba(0, 0, 0, .5)
+      border-radius 5px
 
-  ::-webkit-scrollbar-thumb:hover
-    background-color rgba(0, 0, 0, .15)
+      &:hover
+        background-color rgba(0, 0, 0, .75)
+      &:active
+        background-color rgba(0, 0, 0, .75)
 
-  ::-webkit-scrollbar-thumb:active
-    background-color rgba(0, 0, 0, .25)
+    ::-webkit-scrollbar-button
+      display none
 
-  ::-webkit-scrollbar-button
-    display none
-
-  ::-webkit-scrollbar-track
-    background-color #FFF
-    // -webkit-box-shadow inset 0 0 6px rgba(0, 0, 0, .3)
-    // border-radius 10px
-    border-top: 1px dashed rgba(0, 0, 0, .25)
-    border-left: 1px dashed rgba(0, 0, 0, .25)
-
-  ::-webkit-scrollbar-track:hover
-    background-color #f0f0f0  // This must be present, or it may be overriden
-
-  ::-webkit-scrollbar-corner
-    // background-color transparent
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-corner
+      background transparent

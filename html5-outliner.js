@@ -29,6 +29,10 @@ Section.prototype={
   asHTML: function(createLinks)
   {
     var headingText = _sectionHeadingText(this.heading);
+    if (headingText.indexOf('[edit] ') === 0) {
+      // Wikipedia hack
+      headingText = headingText.substr(7);
+    }
     if (createLinks) {
       headingText = '<a href="#'+_generateId(this.startingNode)+'">'
                     + headingText
@@ -44,7 +48,9 @@ var _sectionListAsHTML = function (sections, createLinks)
   
   for (var i=0; i < sections.length; i++) {
     if (sections[i].heading.tagName) {
-      retval+='<li class="' + sections[i].heading.tagName.toLowerCase() + '">'+sections[i].asHTML(createLinks)+'</li>';
+      retval+='<li class="outliner-' + sections[i].heading.tagName.toLowerCase() + '">'+sections[i].asHTML(createLinks)+'</li>';
+    } else {
+      retval+='<li class="outliner-tagless">'+sections[i].asHTML(createLinks)+'</li>';
     }
   }
   

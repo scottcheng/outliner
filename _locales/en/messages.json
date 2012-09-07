@@ -6,5 +6,10 @@
   "extDesc": {
     "message": "Outline the page.",
     "description": "Extension description"
+  },
+
+  "closeBtnTitle": {
+    "message": "Close Outliner",
+    "description": "Title message on the close button"
   }
 }

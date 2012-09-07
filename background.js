@@ -12,18 +12,20 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   _gaq.push(['_trackEvent', 'BrowserAction', 'click']);
 
   chrome.tabs.executeScript(tab.id, {
-    file: 'lib/jquery.min.js'
+    file: 'lib/jquery.min.js',
+    runAt: 'document_end'
   }, function() {
     chrome.tabs.executeScript(tab.id, {
-      file: 'lib/html5-outliner.js'
+      file: 'html5-outliner.js',
+      runAt: 'document_end'
     }, function() {
       chrome.tabs.executeScript(tab.id, {
-        file: 'outliner.js'
+        file: 'outliner.js',
+        runAt: 'document_end'
       }, function() {
         chrome.tabs.insertCSS(tab.id, {
-          file: 'style.css'
-        }, function() {
-          console.log('all injected');
+          file: 'style.css',
+          runAt: 'document_end'
         });
       });
     });
