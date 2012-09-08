@@ -1,6 +1,6 @@
 {
   "name": "__MSG_extName__",
-  "version": "0.2.7",
+  "version": "0.2.9",
   "description": "__MSG_extDesc__",
   "permissions": [
     "tabs",
@@ -13,10 +13,14 @@
     ]
   },
   "browser_action": {
+    "default_icon": "ui/logo_19.png",
     "default_title": "__MSG_extName__"
   },
   "default_locale": "en",
   "icons": {
+    "16": "ui/logo_16.png",
+    "48": "ui/logo_48.png",
+    "128": "ui/logo_128.png"
   },
   "web_accessible_resources": [
     "ui/low_contrast_linen.png"
