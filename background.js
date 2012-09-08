@@ -1,5 +1,5 @@
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+_gaq.push(['_setAccount', 'UA-34662666-1']);
 _gaq.push(['_trackPageview']);
 
 (function() {
@@ -9,7 +9,7 @@ _gaq.push(['_trackPageview']);
 })();
 
 chrome.browserAction.onClicked.addListener(function(tab) {
-  _gaq.push(['_trackEvent', 'BrowserAction', 'click']);
+  _gaq.push(['_trackEvent', 'BrowserAction', 'click', tab.url]);
 
   chrome.tabs.executeScript(tab.id, {
     file: 'lib/jquery.min.js',
