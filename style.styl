@@ -25,18 +25,6 @@ body
   overflow hidden
   -webkit-transition left .5s
   left -280px
-  
-  &:after
-    content ''
-    display block
-    position absolute
-    right -24px
-    width 24px
-    top -12px
-    bottom -12px
-    background transparent
-    box-shadow 0 0 12px rgba(#000, .9)
-
 
   #outliner-sidebar-header
     position absolute
@@ -54,7 +42,7 @@ body
       -webkit-transform rotate(-90deg) translateX(-75px)
     #outliner-sidebar-close-btn
       position absolute
-      bottom 20px
+      bottom 10px
       left 50%
       width 24px
       height 24px
@@ -68,7 +56,7 @@ body
         width 24px
         height 4px
         top 10px
-        border-radius 1px
+        border-radius 2px
         background-color #000
       &:before
         -webkit-transform rotate(45deg)
@@ -86,6 +74,7 @@ body
     position relative
     width 238px
     height 100%
+    box-shadow inset -3px 0 12px rgba(#000, .5)
     #outliner-sidebar-content
       overflow auto
       position absolute
@@ -126,6 +115,8 @@ body
             &:hover
               color #fff
               -webkit-transition color .25s
+            &.outliner-invisible
+              display none
       & > ol
         padding-left 0 !important
         & > li
