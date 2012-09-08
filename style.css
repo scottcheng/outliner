@@ -1,12 +1,12 @@
 body{position:relative;-webkit-transition:margin-left .5s}
 #outliner-sidebar,#outliner-sidebar div,#outliner-sidebar ol,#outliner-sidebar li,#outliner-sidebar a{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;line-height:1;background:transparent}
 #outliner-sidebar{font-family:sans-serif;position:fixed;top:0;bottom:0;background:url("chrome-extension://__MSG_@@extension_id__/ui/low_contrast_linen.png") repeat;overflow:hidden;-webkit-transition:left .5s;left:-280px;}
-#outliner-sidebar #outliner-sidebar-header{position:absolute;left:0;top:0;bottom:0;padding:0 5px;width:32px;background:rgba(0,0,0,0.5);box-shadow:0 0 12px rgba(0,0,0,0.9);}
-#outliner-sidebar #outliner-sidebar-header #outliner-sidebar-title{font-size:26px;color:#000;text-shadow:-1px 0 rgba(255,255,255,0.2);-webkit-transform:rotate(-90deg) translateX(-75px)}
+#outliner-sidebar #outliner-sidebar-header{position:absolute;left:0;top:0;bottom:0;padding:0 5px;width:32px;background:rgba(0,0,0,0.3);box-shadow:0 0 12px rgba(0,0,0,0.9);}
+#outliner-sidebar #outliner-sidebar-header #outliner-sidebar-title{font-size:26px;color:#000;text-shadow:-1px 0 rgba(255,255,255,0.15);-webkit-transform:rotate(-90deg) translateX(-75px)}
 #outliner-sidebar #outliner-sidebar-header #outliner-sidebar-close-btn{position:absolute;bottom:10px;left:50%;width:24px;height:24px;margin-left:-12px;cursor:pointer;}
 #outliner-sidebar #outliner-sidebar-header #outliner-sidebar-close-btn:before,#outliner-sidebar #outliner-sidebar-header #outliner-sidebar-close-btn:after{content:'';display:block;position:absolute;width:24px;height:4px;top:10px;border-radius:2px;background-color:#000}
-#outliner-sidebar #outliner-sidebar-header #outliner-sidebar-close-btn:before{-webkit-transform:rotate(45deg);box-shadow:1px 1px rgba(255,255,255,0.2)}
-#outliner-sidebar #outliner-sidebar-header #outliner-sidebar-close-btn:after{-webkit-transform:rotate(-45deg);box-shadow:-1px 1px rgba(255,255,255,0.2)}
+#outliner-sidebar #outliner-sidebar-header #outliner-sidebar-close-btn:before{-webkit-transform:rotate(45deg);box-shadow:1px 1px rgba(255,255,255,0.15)}
+#outliner-sidebar #outliner-sidebar-header #outliner-sidebar-close-btn:after{-webkit-transform:rotate(-45deg);box-shadow:-1px 1px rgba(255,255,255,0.15)}
 #outliner-sidebar #outliner-sidebar-content-wrapper{margin-left:42px;background:transparent;overflow:hidden;box-sizing:border-box;position:relative;width:238px;height:100%;box-shadow:inset -3px 0 12px rgba(0,0,0,0.5);}
 #outliner-sidebar #outliner-sidebar-content-wrapper #outliner-sidebar-content{overflow:auto;position:absolute;top:5px;left:5px;bottom:5px;right:5px;box-sizing:border-box;color:#ccc;text-shadow:0 1px 2px #000;padding:5px;}
 #outliner-sidebar #outliner-sidebar-content-wrapper #outliner-sidebar-content ol{padding:0 0 0 15px;margin:0;}
