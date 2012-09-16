@@ -10,7 +10,7 @@ body{position:relative;-webkit-transition:margin-left .5s}
 #outliner-sidebar #outliner-sidebar-content-wrapper{margin-left:42px;background:transparent;overflow:hidden;box-sizing:border-box;position:relative;width:238px;height:100%;box-shadow:inset -3px 0 12px rgba(0,0,0,0.5);}
 #outliner-sidebar #outliner-sidebar-content-wrapper #outliner-sidebar-content{overflow:auto;position:absolute;top:5px;left:5px;bottom:5px;right:5px;box-sizing:border-box;color:#ccc;text-shadow:0 1px 2px #000;padding:5px;}
 #outliner-sidebar #outliner-sidebar-content-wrapper #outliner-sidebar-content ol{padding:0 0 0 15px;margin:0;}
-#outliner-sidebar #outliner-sidebar-content-wrapper #outliner-sidebar-content ol li{margin:1em 0 0;line-height:125%;padding:0;list-style:none;}
+#outliner-sidebar #outliner-sidebar-content-wrapper #outliner-sidebar-content ol li{margin:1em 0 0;line-height:125%;padding:0;list-style:none;text-align:left;}
 #outliner-sidebar #outliner-sidebar-content-wrapper #outliner-sidebar-content ol li.outliner-h1{font-size:20px}
 #outliner-sidebar #outliner-sidebar-content-wrapper #outliner-sidebar-content ol li.outliner-h2{font-size:16px}
 #outliner-sidebar #outliner-sidebar-content-wrapper #outliner-sidebar-content ol li.outliner-h3{font-size:13px}
