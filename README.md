@@ -9,7 +9,9 @@ Release under the MIT license.
 - - - - -
 
 
-Many pages on the Internet do not feature a well-designed in-page navigator. Outliner is here to help. It generates a table of contents by extracting all the headings in the page.
+Outliner generates a table of contents by extracting all the headings in the page.
+
+Many pages on the Internet do not feature a well-designed in-page navigator. Outliner is here to help.
 
 
 How to use
